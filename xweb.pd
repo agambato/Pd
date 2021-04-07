@@ -1,0 +1,21 @@
+#N canvas 458 23 450 300 12;
+#N canvas 663 220 450 300 core 0;
+#X obj 79 197 osc~ 220;
+#X obj 79 226 *~;
+#X obj 145 220 line~;
+#X obj 79 255 dac~;
+#X msg 158 178 \$1 50;
+#X obj 124 123 r env_on;
+#X floatatom 124 152 5 0 0 0 - - -, f 5;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 0 3 1;
+#X connect 2 0 1 1;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X restore 77 248 pd core;
+#X obj 56 35 cnv 15 279 150 snd_cnv rcv_cnv empty 20 12 0 14 #e0e0e0
+#404040 0;
+#X obj 76 51 tgl 52 0 env_on rcv_env empty 17 7 0 10 #ff9300 #000000
+#000000 0 1;
